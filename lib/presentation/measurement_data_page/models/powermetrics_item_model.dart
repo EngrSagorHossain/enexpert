@@ -1,5 +1,5 @@
-import 'powerquality_item_model.dart';
 import '../../../core/app_export.dart';
+import 'powerquality_item_model.dart';
 
 /// This class is used in the [powermetrics_item_widget] screen.
 class PowermetricsItemModel {
@@ -12,6 +12,14 @@ class PowermetricsItemModel {
     this.apparentPowerLabel,
     this.powerqualityItemList,
     this.id,
+    required RxString dynamicText,
+    required RxString dynamicText1,
+    required RxString v1Value,
+    required RxString v1Label,
+    required RxString v2Value,
+    required RxString v2Label,
+    required RxString v3Value,
+    required RxString v3Label,
   }) {
     activePowerValue = activePowerValue ?? Rx("120,5");
     activePowerUnit = activePowerUnit ?? Rx("Kw");
@@ -36,7 +44,7 @@ class PowermetricsItemModel {
           PowerqualityItemModel(
               userImage: ImageConstant.imgLineDeviceWir.obs,
               dynamicText: "126,48".obs,
-              dynamicText1: "V3".obs)
+              dynamicText1: "V3".obs),
         ]);
     id = id ?? Rx("");
   }

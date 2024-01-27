@@ -1,7 +1,6 @@
 import 'package:enexpet/core/app_export.dart';
 import 'package:enexpet/presentation/sensor_two_screen/models/sensor_two_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 /// A controller class for the SensorTwoScreen.
 ///
@@ -71,7 +70,7 @@ class SensorTwoController extends GetxController {
     nameController.dispose();
     labelController1.dispose();
     sensorTwoModelObj.value.userprofile1ItemList.value.forEach((element) {
-      element.labelController.dispose();
+      element.labelController!.dispose();
     });
   }
 

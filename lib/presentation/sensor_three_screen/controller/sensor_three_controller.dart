@@ -1,7 +1,6 @@
 import 'package:enexpet/core/app_export.dart';
 import 'package:enexpet/presentation/sensor_three_screen/models/sensor_three_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 /// A controller class for the SensorThreeScreen.
 ///
@@ -71,7 +70,7 @@ class SensorThreeController extends GetxController {
     nameController.dispose();
     labelController1.dispose();
     sensorThreeModelObj.value.userprofile2ItemList.value.forEach((element) {
-      element.labelController.dispose();
+      element.labelController!.dispose();
     });
   }
 

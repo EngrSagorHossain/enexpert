@@ -1,7 +1,6 @@
 import 'package:enexpet/core/app_export.dart';
 import 'package:enexpet/presentation/sensor_one_screen/models/sensor_one_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 /// A controller class for the SensorOneScreen.
 ///
@@ -71,7 +70,7 @@ class SensorOneController extends GetxController {
     nameController.dispose();
     labelController1.dispose();
     sensorOneModelObj.value.sensorcomponentItemList.value.forEach((element) {
-      element.labelController.dispose();
+      element.labelController!.dispose();
     });
   }
 
